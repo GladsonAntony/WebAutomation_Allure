@@ -2,31 +2,20 @@ package tests;
 
 import org.testng.annotations.Test;
 
-import ru.qatools.properties.Property;
-import ru.qatools.properties.PropertyLoader;
-import ru.qatools.properties.Resource;
+import utils.DateAndTime;
 
-@Resource.File("./src/main/resources/environment.properties")
-//@Resource.Classpath("${system.file.name}.path.${system.scope.value}.properties")
 public class TestProperties 
 {
-	@Property("java.version")
-	public String portName;
-	
-	@Property("Browser")
-	public String Browser;
-
-	public TestProperties() {
-        PropertyLoader.newInstance()
-                //.withPropertyProvider(new SysPropPathReplacerProvider())
-                .populate(this);
-    }
-		
-	
 	@Test
-	public void test1() throws Exception
+	public void test123() throws Exception
 	{
-		System.out.println(portName);
-		System.out.println(Browser);
+		System.out.println(DateAndTime.getDate());
+		System.out.println(DateAndTime.getTime());
+		System.out.println(DateAndTime.getMonth_Full());
+		System.out.println(DateAndTime.getDayOfTheMonth());
+		System.out.println(DateAndTime.getDayCount());
+		System.out.println(DateAndTime.getYear());
+		System.out.println(DateAndTime.getHourOfTheDay());
+		System.out.println(DateAndTime.getWeekCount());
 	}
 }
