@@ -95,28 +95,28 @@ public class AllureAttachments extends ApplicationConfiguration
 	}
 	
 	/*To Attach the DOCX File to the Allure Report*/
-	@Attachment(value="MS Word Doc Attachment", type="text/json")
+	@Attachment(value="MS Word - DOCX Attachment")
 	public byte[] attachFileType_DOCX(String filePath) throws Exception
 	{
 		return fileToBytes(filePath);
 	}
 	
 	/*To Attach the DOC File to the Allure Report*/
-	@Attachment(value="MS Word Doc Attachment", type="text/json")
+	@Attachment(value="MS Word - DOC Attachment")
 	public static byte[] attachFileType_DOC(String filePath) throws Exception
 	{
 		return fileToBytes(filePath);
 	}
 	
 	/*To Attach the JPEG Image File to the Allure Report*/
-	@Attachment(value="MS Word Doc Attachment", type = "image/jpg")
+	@Attachment(value="JPEG Attachment", type = "image/jpg")
 	public static byte[] attachFileType_JPEG(String filePath) throws Exception
 	{
 		return fileToBytes(filePath);
 	}
 	
 	/*To Attach the PNG Image File to the Allure Report*/
-	@Attachment(value="MS Word Doc Attachment", type = "image/png")
+	@Attachment(value="PNG Attachment", type = "image/png")
 	public static byte[] attachFileType_PNG(String filePath) throws Exception
 	{
 		return fileToBytes(filePath);
