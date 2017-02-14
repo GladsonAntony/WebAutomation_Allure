@@ -166,10 +166,9 @@ public class BrowserFactory extends TestHelper
 	
 	
 	@AfterClass(enabled=true, alwaysRun = true)
-	public void closeBrowser() throws Exception 
+	public void tearDown() throws Exception 
 	{
 		Thread.sleep(5000);
-		driver.close();
 		driver.quit();
 	}
 	
