@@ -27,7 +27,7 @@ public class BrowserFactory extends TestHelper
 	{
 		System.out.println("Operating System: " + OSName);
 
-		if (BrowserType.equalsIgnoreCase("Firefox")) 
+		if (BrowserType.toLowerCase().equalsIgnoreCase("firefox")) 
 		{
 			if (OSName.contains("Windows")) 
 			{
@@ -60,7 +60,7 @@ public class BrowserFactory extends TestHelper
 			}
 		}
 
-		else if (BrowserType.equalsIgnoreCase("Chrome")) 
+		else if (BrowserType.toLowerCase().equalsIgnoreCase("chrome")) 
 		{
 			if (OSName.contains("Windows")) 
 			{
@@ -88,7 +88,7 @@ public class BrowserFactory extends TestHelper
 			}
 		}
 
-		else if (BrowserType.equalsIgnoreCase("IE"))
+		else if (BrowserType.toLowerCase().equalsIgnoreCase("ie"))
 		{
 			if (OSName.contains("Windows")) 
 			{
@@ -104,7 +104,7 @@ public class BrowserFactory extends TestHelper
 			}
 		}
 
-		else if (BrowserType.equalsIgnoreCase("Opera")) 
+		else if (BrowserType.toLowerCase().equalsIgnoreCase("opera")) 
 		{
 			if (OSName.contains("Windows")) 
 			{
@@ -137,9 +137,9 @@ public class BrowserFactory extends TestHelper
 				driver.get(WebsiteURL);
 			}
 		} 
-		else if (BrowserType.equalsIgnoreCase("Edge")) 
+		else if (BrowserType.toLowerCase().equalsIgnoreCase("edge")) 
 		{
-			if (OSName.contains("Windows")) 
+			if (OSName.equals("Windows 10")) 
 			{
 				System.setProperty("webdriver.edge.driver", WindowsDrivers + "MicrosoftWebDriver.exe");
 				driver = new EdgeDriver();
@@ -152,7 +152,7 @@ public class BrowserFactory extends TestHelper
 				System.out.println("Edge Browser is Only Supported on Windows 10 OS");
 			}
 		} 
-		else if (BrowserType.equalsIgnoreCase("Unit")) 
+		else if (BrowserType.toLowerCase().equalsIgnoreCase("unit")) 
 		{
 			driver = new HtmlUnitDriver();
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

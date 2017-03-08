@@ -14,7 +14,7 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<selenium.version>3.0.1</selenium.version>
 		<allure.version>1.5.0</allure.version>
-		<aspectj.version>1.8.5</aspectj.version>
+		<aspectj.version>1.8.10</aspectj.version>
 		<apachepoi.version>3.13</apachepoi.version>
 	</properties>
 
@@ -140,8 +140,6 @@
 		</dependency>
 
 
-
-
 		<!-- Allure TestNG Adapter -->
 		<dependency>
 			<groupId>ru.yandex.qatools.allure</groupId>
@@ -167,6 +165,18 @@
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time</artifactId>
 			<version>2.9.7</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjtools</artifactId>
+			<version>${aspectj.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>${aspectj.version}</version>
 		</dependency>
 
 	</dependencies>
@@ -228,23 +238,28 @@
 		<plugins>
 			<!-- Apache Maven SureFire Plugin -->
 			<plugin>
+				<!-- <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-surefire-plugin</artifactId> 
+					<version>2.19.1</version> <configuration> <testFailureIgnore>true</testFailureIgnore> 
+					<argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar" 
+					</argLine> <properties> <property> <name>listener</name> <value>listeners.AllureListener</value> 
+					</property> </properties> </configuration> Aspect J Weaver Dependency <dependencies> 
+					<dependency> <groupId>org.aspectj</groupId> <artifactId>aspectjweaver</artifactId> 
+					<version>${aspectj.version}</version> </dependency> </dependencies> -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.19.1</version>
 				<configuration>
-					<testFailureIgnore>true</testFailureIgnore>
-					<argLine>
-						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-					</argLine>
 					<properties>
 						<property>
 							<name>listener</name>
 							<value>listeners.AllureListener</value>
 						</property>
 					</properties>
+					<suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+					<argLine>-javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar</argLine>
 				</configuration>
-
-				<!-- Aspect J Weaver Dependency -->
 				<dependencies>
 					<dependency>
 						<groupId>org.aspectj</groupId>
@@ -303,7 +318,7 @@
 			<plugin>
 				<groupId>ru.yandex.qatools.allure</groupId>
 				<artifactId>allure-maven-plugin</artifactId>
-				<version>2.2</version>
+				<version>2.5</version>
 				<!-- <configuration> <reportVersion>${allure.version}</reportVersion> 
 					</configuration> -->
 			</plugin>
