@@ -12,7 +12,7 @@
 		<compiler.version>1.8</compiler.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<selenium.version>3.0.1</selenium.version>
+		<selenium.version>3.3.1</selenium.version>
 		<allure.version>1.5.0</allure.version>
 		<aspectj.version>1.8.10</aspectj.version>
 		<apachepoi.version>3.13</apachepoi.version>
@@ -20,6 +20,14 @@
 
 	<!-- All the Dependencies Added Here -->
 	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-resources-plugin</artifactId>
+			<version>3.0.2</version>
+		</dependency>
+
 
 		<!-- TestNG Dependency -->
 		<dependency>
