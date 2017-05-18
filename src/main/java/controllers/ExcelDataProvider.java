@@ -22,7 +22,7 @@ public class ExcelDataProvider extends InitMethod
 		File file = new File("./src/test/resources/Excel Files/TestData.xlsx");
 		String SheetName = method.getName();
 		System.out.println(SheetName);
-		Object testObjArray[][] = ExcelUtils.getTableArray(file.getAbsolutePath(), SheetName);
+		Object testObjArray[][] = ExcelUtils.getTableArray_XLSX(file.getAbsolutePath(), SheetName);
 		return testObjArray;
 	}
 	
@@ -30,7 +30,7 @@ public class ExcelDataProvider extends InitMethod
 	public static Object[][] excelSheetNameAsMethodName(Method method) throws Exception
 	{
 		File file = new File("./src/test/resources/Excel Files/"+method.getName()+".xlsx");
-		Object testObjArray[][] = ExcelUtils.getTableArray(file.getAbsolutePath());
+		Object testObjArray[][] = ExcelUtils.getTableArray_XLSX(file.getAbsolutePath());
 		return testObjArray;
 	}
 }
