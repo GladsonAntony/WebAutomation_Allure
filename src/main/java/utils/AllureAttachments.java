@@ -12,10 +12,10 @@ import java.nio.file.Paths;
 
 import javax.imageio.ImageIO;
 
+import io.qameta.allure.Attachment;
 import org.openqa.selenium.WebDriver;
 
 import controllers.ApplicationConfiguration;
-import ru.yandex.qatools.allure.annotations.Attachment;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 

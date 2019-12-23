@@ -3,11 +3,12 @@
  */
 package pageObjects.modules;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import pageObjects.initializePageObjects.PageFactoryInitializer;
-import ru.yandex.qatools.allure.annotations.Step;
+import utils.ExplicitWaiting;
 import utils.RandomGenerator;
 
 /**
@@ -26,7 +27,7 @@ public class GMailPageObjects extends PageFactoryInitializer
 	@Step("To Enter Email ID and Click Next Button")
 	public void enterEmailID() 
 	{
-		utils.FluentWaiting.waitUntillElementToBeClickable(30, 500, emailIDTextBox);
+		ExplicitWaiting.explicitWaitElementToBeClickable(emailIDTextBox,10);
 		emailIDTextBox.sendKeys(RandomGenerator.GenerateRandomEMAILIDs("google.com"));	
 		nextButton.click();
 	}
