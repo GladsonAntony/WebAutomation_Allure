@@ -18,7 +18,7 @@
 		<selenium.version>3.141.59</selenium.version>
 		<allure.version>2.10.0</allure.version>
 		<aspectj.version>1.9.5</aspectj.version>
-		<apachepoi.version>3.13</apachepoi.version>
+		<apachepoi.version>4.1.2</apachepoi.version>
 		<slf4j.version>1.7.29</slf4j.version>
 		<ashot.version>1.5.4</ashot.version>
 		<seleniumshutterbag.version>0.9.3</seleniumshutterbag.version>
