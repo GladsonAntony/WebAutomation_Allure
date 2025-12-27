@@ -122,7 +122,7 @@ public class BrowserFactory extends TestHelper
 
 		else if (BrowserType.toLowerCase().equalsIgnoreCase("edge"))
 		{
-			if (OSName.equals("Windows 10")) 
+			if (OSName.equals("Windows 10") || (OSName.equals("Windows 11")))
 			{
 				driver = new EdgeDriver();
 				driver.manage().window().maximize();

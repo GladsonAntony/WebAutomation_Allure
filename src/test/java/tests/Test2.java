@@ -27,18 +27,18 @@ public class Test2 {
 		proc.waitFor();
 	}
 
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void test123() throws Exception 
 	{
-		String command="mvn -version";
+		String command="java -version";
 
 		Process process = Runtime.getRuntime().exec(command);
-		System.out.println("the output stream is "+process.getOutputStream());
+		System.out.println("the output stream is "+process.getOutputStream().toString());
 		BufferedReader reader=new BufferedReader( new InputStreamReader(process.getInputStream()));
 		String s; 
 		while ((s = reader.readLine()) != null)
 		{
-			System.out.println("The inout stream is " + s);
+			System.out.println("The input stream is " + s);
 		}
 
 	}
