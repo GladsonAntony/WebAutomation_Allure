@@ -18,19 +18,19 @@ public class ApplicationConfiguration
 		PropertyLoader.newInstance().populate(this);
 	}
 
-	@Property("BrowserType")
+	@Property(value = "BrowserType")
 	private String BrowserName;
 
-	@Property("WebsiteURL")
+	@Property(value = "WebsiteURL")
 	private String WebsiteURL;
 
-	@Property("UserName")
+	@Property(value = "UserName")
 	private String UserName;
 
-	@Property("Password")
+	@Property(value = "Password")
 	private String Password;
 
-	@Property("VideoRecordingFeature")
+	@Property(value = "VideoRecordingFeature")
 	private String VideoRecordingFeature;
 
 	public String getBrowserName()

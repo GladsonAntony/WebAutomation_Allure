@@ -9,6 +9,7 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -23,13 +24,11 @@ public class ExcelUtils
 	private static XSSFSheet xlsxWorkSheet;
 	private static XSSFWorkbook xlsxWorkBook;
 	private static XSSFCell xlsxCell;
-	@SuppressWarnings("unused")
 	private static XSSFRow xlsxRow;
 
 	private static HSSFSheet xlsWorkSheet;
 	private static HSSFWorkbook xlsWorkBook;
 	private static HSSFCell xlsCell;
-	@SuppressWarnings("unused")
 	private static HSSFRow xlsRow;
 
 	/** To get the Excel-XLSX File with Path and SheetName */
@@ -231,7 +230,7 @@ public class ExcelUtils
 		try
 		{
 			xlsxCell = xlsxWorkSheet.getRow(RowNum).getCell(ColNum);
-			if(xlsxCell.getCellType() == Cell.CELL_TYPE_STRING )
+			if(xlsxCell.getCellType() == CellType.STRING )
 			{
 				String stringCellData = xlsxCell.getStringCellValue();
 				CellData = stringCellData;
@@ -261,7 +260,7 @@ public class ExcelUtils
 		try
 		{
 			xlsCell = xlsWorkSheet.getRow(RowNum).getCell(ColNum);
-			if(xlsCell.getCellType() == Cell.CELL_TYPE_STRING )
+			if(xlsCell.getCellType() == CellType.STRING)
 			{
 				String stringCellData = xlsCell.getStringCellValue();
 				CellData = stringCellData;

@@ -21,7 +21,7 @@ import org.testng.asserts.SoftAssert;
  */
 public class InitMethod 
 {
-	static ApplicationConfiguration appConfig = new ApplicationConfiguration();
+	public static ApplicationConfiguration appConfig = new ApplicationConfiguration();
 	
 	public static String  BrowserType = appConfig.getBrowserName();
 	public static String  WebsiteURL = appConfig.getWebsiteURL();

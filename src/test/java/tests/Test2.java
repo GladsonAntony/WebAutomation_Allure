@@ -1,6 +1,3 @@
-/**
- * 
- */
 package tests;
 
 import java.io.BufferedReader;
