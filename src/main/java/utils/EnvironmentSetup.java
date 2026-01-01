@@ -1,6 +1,3 @@
-/**
- * 
- */
 package utils;
 
 import java.io.File;
@@ -13,8 +10,9 @@ import org.testng.annotations.Test;
 
 /**
  * @Author Gladson Antony
- * @Date 28-Jan-2017
+ * @Date 01-Jan-2025
  */
+
 public class EnvironmentSetup extends InitMethod
 {
 	@Test
@@ -26,6 +24,7 @@ public class EnvironmentSetup extends InitMethod
 			Properties properties = new Properties();
 			properties.setProperty("Author", "Gladson Antony");
 			System.out.println("Author --> " +properties.getProperty("Author"));
+			properties.setProperty("Application URL", WebsiteURL);
 			System.out.println("Application URL --> " +properties.getProperty("Application URL"));
 			properties.setProperty("OS", OSName);
 			System.out.println("OS --> " +properties.getProperty("OS"));
@@ -41,6 +40,12 @@ public class EnvironmentSetup extends InitMethod
 			System.out.println("Host Name --> " +properties.getProperty("Host Name"));
 			properties.setProperty("Host IP Address", InetAddress.getLocalHost().getHostAddress());
 			System.out.println("Host IP Address --> " +properties.getProperty("Host IP Address"));
+			System.out.println("User Name --> " +System.getProperty("user.name"));
+			System.out.println("User Home Directory --> " +System.getProperty("user.home"));
+			System.out.println("User Directory --> " +System.getProperty("user.dir"));
+			System.out.println("User Language --> " +System.getProperty("user.language"));
+			System.out.println("User Country --> " +System.getProperty("user.country"));
+			System.out.println("User TimeZone --> " +System.getProperty("user.timezone"));
 
 			File file = new File("./src/main/resources/environment.properties");
 			System.out.println(file.getAbsolutePath());

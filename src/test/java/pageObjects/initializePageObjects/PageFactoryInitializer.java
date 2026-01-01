@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import controllers.BrowserFactory;
 import pageObjects.modules.GMailPageObjects;
 import pageObjects.modules.GoogleHomePageObjects;
+import pageObjects.modules.LandingPage;
 
 /**
  * @author ${Gladson Antony}
@@ -24,6 +25,11 @@ public class PageFactoryInitializer extends BrowserFactory
 	public GMailPageObjects gmailPage()
 	{
 		return PageFactory.initElements(driver, GMailPageObjects.class);
+	}
+
+	public LandingPage landingPage()
+	{
+		return PageFactory.initElements(driver, LandingPage.class);
 	}
 	
 

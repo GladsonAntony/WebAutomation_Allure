@@ -360,8 +360,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
 				<configuration>
-					<source>9</source>
-					<target>9</target>
+					<source>11</source>
+					<target>11</target>
 				</configuration>
 			</plugin>
 
@@ -379,7 +379,7 @@
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${basedir}/allure-results</outputDirectory>
+							<outputDirectory>${basedir}/target/allure-results</outputDirectory>
 							<resources>
 								<resource>
 									<directory>${basedir}/src/main/resources</directory>
