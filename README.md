@@ -44,36 +44,35 @@ This framework supports **multiple browsers and platforms**, uses **Allure Repor
 
 ## 📁 Project Structure
 
-:::mermaid
-
+```mermaid
 flowchart TD
 
-A[WebAutomation_Allure<br/>Root Project] --> B[src]
+  A[WebAutomation_Allure<br/>Root Project] --> B[src]
+  
+  B --> C[main]
+  C --> D[java]
+  
+  D --> E[base<br/><small>Driver + Test Base</small>]
+  D --> F[pages<br/><small>Page Object Model Classes</small>]
+  D --> G[utils<br/><small>Helpers & Common Utilities</small>]
+  D --> H[config<br/><small>Framework Configurations</small>]
+  
+  B --> I[test]
+  I --> J[java]
+  
+  J --> K[tests<br/><small>TestNG Test Classes</small>]
+  J --> L[dataproviders<br/><small>Excel / Data Provider Logic</small>]
+  J --> M[listeners<br/><small>TestNG + Reporting Hooks</small>]
+  
+  A --> N[pom.xml<br/><small>Maven Config</small>]
+  A --> O[testng.xml<br/><small>Suite Definition</small>]
+  A --> P[README.md]
+  A --> Q[LICENSE]
+  A --> R[target<br/><small>Build Output</small>]
+  A --> S[allure-results<br/><small>Execution Artifacts</small>]
+  A --> T[logs<br/><small>Execution Logs</small>]
 
-B --> C[main]
-C --> D[java]
-
-D --> E[base<br/><small>Driver + Test Base</small>]
-D --> F[pages<br/><small>Page Object Model Classes</small>]
-D --> G[utils<br/><small>Helpers & Common Utilities</small>]
-D --> H[config<br/><small>Framework Configurations</small>]
-
-B --> I[test]
-I --> J[java]
-
-J --> K[tests<br/><small>TestNG Test Classes</small>]
-J --> L[dataproviders<br/><small>Excel / Data Provider Logic</small>]
-J --> M[listeners<br/><small>TestNG + Reporting Hooks</small>]
-
-A --> N[pom.xml<br/><small>Maven Config</small>]
-A --> O[testng.xml<br/><small>Suite Definition</small>]
-A --> P[README.md]
-A --> Q[LICENSE]
-A --> R[target<br/><small>Build Output</small>]
-A --> S[allure-results<br/><small>Execution Artifacts</small>]
-A --> T[logs<br/><small>Execution Logs</small>]
-
-:::
+```
 
 WebAutomation_Allure/
 ├─ src/
@@ -83,7 +82,6 @@ WebAutomation_Allure/
 ├─ testng.xml              # TestNG suite config
 ├─ README.md
 └─ LICENSE.md
-
 
 
 ---
