@@ -13,6 +13,7 @@ target
 test-output
 Requests
 Response
+allure-report
 
 #intellij idea
 .idea
@@ -32,3 +33,4 @@ video
 *.*~
 .allure/
 .allure-results/
+.allure-report/
